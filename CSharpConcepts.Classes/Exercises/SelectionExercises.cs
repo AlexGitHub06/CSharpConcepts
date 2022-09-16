@@ -135,7 +135,7 @@ namespace CSharpConcepts.Classes.Exercises
             scissors
         }
 
-        public static void RockPaperScissors(string userChoice)
+        public static void RockPaperScissors(string userChoice) //need to uncomment input from program.cs to work
         {
 
             Random random = new Random();
@@ -148,7 +148,7 @@ namespace CSharpConcepts.Classes.Exercises
             int userNum = (int)Enum.Parse(typeof(RPSChoices), userChoice.ToLower());
 
             if (userNum - num == 1 || userNum - num == -2) { Console.WriteLine("User won"); }
-            else if (num - userNum == 1 || num - userNum == -2) { Console.WriteLine("User lost"); }
+            else if (num - userNum == 1 || num - userNum == -2) { Console.WriteLine("User lost"); } 
             else if (num - userNum == 0) { Console.WriteLine("Draw"); }
 
         }
@@ -157,7 +157,7 @@ namespace CSharpConcepts.Classes.Exercises
         // Write a function that takes in three side lengths.
         // Determine whether a triangle with those sides is equilateral, isosceles, scalene or impossible
 
-        public static string Triangle(double side1, double side2, double side3)
+        public static string Triangle(double side1, double side2, double side3) //need to uncomment input from program.cs to work
         {
             string shape;
 

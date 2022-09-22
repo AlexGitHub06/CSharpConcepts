@@ -135,21 +135,25 @@ namespace CSharpConcepts.Classes.Exercises
             scissors
         }
 
-        public static void RockPaperScissors(string userChoice) //need to uncomment input from program.cs to work
+        public static string RockPaperScissors(string userChoice) //need to uncomment input from program.cs to work
         {
 
             Random random = new Random();
             int num = random.Next(0, 3);
             string computerChoice = ((RPSChoices)num).ToString();
 
+            string answer = "";
+
             Console.WriteLine($"User choice: {userChoice}");
             Console.WriteLine($"Computer choice: {computerChoice}");
 
             int userNum = (int)Enum.Parse(typeof(RPSChoices), userChoice.ToLower());
 
-            if (userNum - num == 1 || userNum - num == -2) { Console.WriteLine("User won"); }
-            else if (num - userNum == 1 || num - userNum == -2) { Console.WriteLine("User lost"); } 
-            else if (num - userNum == 0) { Console.WriteLine("Draw"); }
+            if (userNum - num == 1 || userNum - num == -2) { answer = "User won"; }
+            else if (num - userNum == 1 || num - userNum == -2) {answer = "User lost"; } 
+            else if (num - userNum == 0) { answer = "Draw"; }
+            
+            return answer;
 
         }
 

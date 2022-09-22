@@ -12,11 +12,12 @@ namespace CSharpConcepts
     {
         internal static void Run()
         {
-            CallTypeExercises();
-            CallSelectionExercises();
+            //CallTypeExercises();
+            //CallSelectionExercises();
+            CallIterationExercises();
 
         }
-
+        /*
         private static void CallTypeExercises()
         {
             // Add your calling code here for the questions an example is below
@@ -73,5 +74,46 @@ namespace CSharpConcepts
 
 
         }
+        */
+
+        private static void CallIterationExercises()
+        {
+
+            List<int> cricketRuns = new() { 100, 300 };
+
+            Console.WriteLine("\n# Centuries");
+            Debug.Assert(IterationExercises.NumberOfCenturiesScored(cricketRuns) == 4);
+
+            Console.WriteLine("\n# Batting Average");
+            Debug.Assert(IterationExercises.BattingAverage(cricketRuns) == 200);
+
+            List<string> names = new() { "Alex", "Jonathan", "Jerry" };
+
+            Console.WriteLine("\n# Usernames");
+            IterationExercises.UserNames(names).ForEach(Console.WriteLine);
+
+            Console.WriteLine("\n# Multiples");
+            IterationExercises.CalculateMultiples(6, 10).ForEach(Console.WriteLine);
+
+            Console.WriteLine("\n# Is Prime");
+            Debug.Assert(IterationExercises.IsPrime(311) == true);
+
+            Console.WriteLine("\n# Star Pattern");
+
+            Console.WriteLine("Enter max number of stars");
+            int.TryParse(Console.ReadLine(), out int starNum);
+            IterationExercises.StarPattern(starNum);
+
+            List<List<char>> board = new()
+        {
+            new() { '0', '0', 'X' },
+            new() { ' ', 'X', ' ' },
+            new() { 'X', 'X', '0' }
+        };
+
+            Console.WriteLine("\n# Noughts and Crosses");
+            Console.WriteLine(IterationExercises.NoughtsCrosses(board));
+        }
+
     }
 }

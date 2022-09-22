@@ -9,6 +9,7 @@
 
             // Calls the exercises code
             Exercises.Run();
+            
         }
 
        

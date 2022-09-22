@@ -20,7 +20,7 @@ namespace CSharpConcepts.Classes.Examples
             Console.WriteLine($"{decimalNum} is of type {decimalNum.GetType()}. ");
 
             int intNum = 10;
-            Console.WriteLine($"{intNum} is of type {intNum.GetType()}. Min value is {int.MinValue}. Max value is {int.MinValue}.");
+            Console.WriteLine($"{intNum} is of type {intNum.GetType()}. Min value is {int.MinValue}. Max value is {int.MaxValue}.");
         }     
 
 

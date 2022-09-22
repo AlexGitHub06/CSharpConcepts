@@ -7,8 +7,56 @@ namespace CSharpConcepts
     {
         internal static void Run()
         {
-            CallTypeExamples();
-            CallSelectionExamples();
+            // CallTypeExamples();
+            // CallSelectionExamples();
+            CallIterationExamples();
+            // CallMathsExamples();
+        }
+
+        private static void CallMathsExamples()
+        {
+            MathsExamples.Rounding();
+            Console.WriteLine();
+
+            MathsExamples.DifferentRoundingOptions(12.5);
+            Console.WriteLine();
+            MathsExamples.DifferentRoundingOptions(-12.5);
+            Console.WriteLine();
+        }
+
+        private static void CallIterationExamples()
+        {
+            //string greeting = IterationExamples.BirthdayGreeting();
+            //Console.WriteLine(greeting);
+
+            //int sum = IterationExamples.SumNumbers();
+            //Console.WriteLine(sum);
+
+            // To save commenting and uncommenting our code and to help test different cases we can use Debug.Assert            
+            // Testing Sum            
+            Debug.Assert(IterationExamples.Sum(-1) == 2, "$Output unexpected");
+            Debug.Assert(IterationExamples.Sum(10) == 55);
+            Debug.Assert(IterationExamples.Sum(100) == 5050);
+
+            List<double> numbers = new() { 9, 12, 3, 7, 17 };
+            List<double> squareNumbers = IterationExamples.SquaredNumbers(numbers);
+            string squareNumbersOutput = string.Join(", ", squareNumbers);
+            Console.WriteLine(squareNumbersOutput);
+
+            //IterationExamples.CakesEaten(10);
+
+            //IterationExamples.ValidateNumberEntry();
+
+            List<List<int>> testScores = new()
+            {
+                new() { 1, 3, 5, 7, 9 },
+                new() { 0, 2, 4, 6 },
+                new() { 11, 22 }
+            };
+            List<int> totalTestScores = IterationExamples.FindTotalTestScore(testScores);
+            string totalTestScoreOutput = string.Join(", ", totalTestScores);
+            Console.WriteLine($"Total test scores are {totalTestScoreOutput}");           
+
         }
 
         private static void CallTypeExamples()

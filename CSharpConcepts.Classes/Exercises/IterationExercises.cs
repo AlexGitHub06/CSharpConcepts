@@ -12,8 +12,14 @@ namespace CSharpConcepts.Classes.Exercises
         // Calculate the number of times a batter scored a century (100 runs) or more in a match
         public static int NumberOfCenturiesScored(List<int> runsScored)
         {
-            int total = runsScored.Sum();
-            return total / 100;
+            int centuries = 0;
+
+            foreach (int runs in runsScored)
+            {
+                if (runs >= 100) { centuries++; }
+            }
+
+            return centuries;
         }
 
         // Q2: Batting Average
@@ -130,8 +136,6 @@ namespace CSharpConcepts.Classes.Exercises
         {
             List<char> options = new() {'X', '0' };
 
-            char draw = ' ';
-
             //check columns
             foreach (char symbol in options){
 
@@ -156,20 +160,18 @@ namespace CSharpConcepts.Classes.Exercises
                 for (int i = 0; i < 3; i++) //diagonal topleft
                 {
                     if (board[i][i] != symbol) { break; }
-                    if (i == 2) { return symbol; }
-                    
+                    if (i == 2) { return symbol; }       
                 }
 
                 for (int i = 0; i < 3; i++) //diagonal topright
                 {
                     if (board[i][2-i] != symbol) { break; }
-                    if (i == 2) { return symbol; }
-
+                    if (i == 2) { return symbol; }  
                 }
                 
             }
 
-            return draw;
+            return ' '; //draw
         }
 
     }

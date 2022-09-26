@@ -112,7 +112,9 @@ namespace CSharpConcepts
         };
 
             Console.WriteLine("\n# Noughts and Crosses");
-            Console.WriteLine(IterationExercises.NoughtsCrosses(board));
+            Console.WriteLine(IterationExercises.NoughtsCrosses(board)); 
+
+            //where is locals window
         }
 
     }

@@ -25,5 +25,7 @@ namespace CSharpConcepts.Tests
             List<double> squaredNumbers = IterationExamples.SquaredNumbers(input);
             CollectionAssert.AreEqual(expected, squaredNumbers);
         }
+
+
     }
 }

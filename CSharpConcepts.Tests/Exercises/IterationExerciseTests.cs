@@ -23,5 +23,14 @@ namespace CSharpConcepts.Tests.Exercises
             double battingAverage = IterationExercises.BattingAverage(input);
             Assert.AreEqual(39.76923076923077, battingAverage, 0.001);
         }
+
+        [TestMethod]
+        public void TestUserNames()
+        {
+            List<string> names = new() { "Alex", "Jonathan", "Jerry" };
+            List<string> UserNames = IterationExercises.UserNames(names);
+        }
+
+
     }
 }
